@@ -2,7 +2,7 @@
   "name": "domotics-backend",
   "version": "1.0.0",
   "description": "Backend nodeJS server for Raspberry Pi",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
