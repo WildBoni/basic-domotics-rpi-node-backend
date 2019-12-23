@@ -1,0 +1,28 @@
+{
+  "name": "domotics-backend",
+  "version": "1.0.0",
+  "description": "Backend nodeJS server for Raspberry Pi",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WildBoni/basic-domotics-rpi-node-backend.git"
+  },
+  "keywords": [
+    "node",
+    "bluetooth",
+    "domotics",
+    "server"
+  ],
+  "author": "Davide Bonifacio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WildBoni/basic-domotics-rpi-node-backend/issues"
+  },
+  "homepage": "https://github.com/WildBoni/basic-domotics-rpi-node-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
