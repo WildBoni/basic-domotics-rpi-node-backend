@@ -17,6 +17,12 @@ exports.lightOn = (req, res, next) => {
         });
       }
   }).scan();
+
+  res.status(200).json({
+    message: 'Here\'s the response!'
+  })
+}
+
 exports.lightOff = (req, res, next) => {
   device
     .on('finished', console.log.bind(console, 'finished'))
