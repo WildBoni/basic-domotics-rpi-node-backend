@@ -1,7 +1,7 @@
 const bluetooth = require('node-bluetooth');
 const device = new bluetooth.DeviceINQ();
 
-var indirizzo, canale, connessione;
+var connessione;
 
 device
 .on('finished', console.log.bind(console, 'finished'))
@@ -10,8 +10,6 @@ device
   if(name == "HC-06") {
     device.findSerialPortChannel(address, function(channel) {
       console.log('Found RFCOMM channel for serial port on %s: ', name, channel);
-      indirizzo = address;
-      canale = channel;
       bluetooth.connect(address, channel, function(err, connection) {
         if(err) return console.log(err);
         connessione = connection;
