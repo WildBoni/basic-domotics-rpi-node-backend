@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <title>Test</title>
+    <title>DB Domotics</title>
 
     <meta charset="utf-8">
     <meta name="description" content="Domotics test">
@@ -9,23 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="manifest" href="manifest.json">
   </head>
   <body>
-    <h1>Welcome</h1>
+    <h1>Welcome!</h1>
     <label class="switch">
       <input type="checkbox">
       <span class="slider"></span>
     </label>
     <div id="status"></div>
     <script src="js/script.js"></script>
-    <script>
-      if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-          .then(function() {
-                console.log('Service Worker Registered');
-          });
-      }
-    </script>
   </body>
 </html>

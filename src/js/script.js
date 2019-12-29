@@ -5,7 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("status").innerHTML = "Switching ON";
+            var resp = JSON.parse(xhttp.responseText);
+            if(resp.response == "H") {
+                document.getElementById("status").innerHTML = "Switching ON";
+            }
           }
         };
         xhttp.open("GET", "data/on", true);
@@ -14,7 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("status").innerHTML = "Switching OFF";
+            var resp = JSON.parse(xhttp.responseText);
+            if(resp.response == "L") {
+                document.getElementById("status").innerHTML = "Switching OFF";
+            }
           }
         };
         xhttp.open("GET", "data/off", true);
