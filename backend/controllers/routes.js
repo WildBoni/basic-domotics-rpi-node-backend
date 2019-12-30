@@ -54,3 +54,41 @@ exports.lightOff = (req, res, next) => {
     });
   });
 }
+
+exports.pirOn = (req, res, next) => {
+  bluetooth.connect(indirizzo, canale, function(err, connection) {
+    if(err) return console.log(err);
+
+    connection.write(Buffer.from('P', 'utf-8'), (err) => {
+      if(err) console.log(err);
+    });
+  
+    connection.on('data', (buffer) => {
+      risposta = buffer.toString();
+      connection.close();
+      res.status(200).json({
+        message: 'Here\'s the response!',
+        response: risposta
+      });
+    });
+  });
+}
+
+exports.pirOff = (req, res, next) => {
+  bluetooth.connect(indirizzo, canale, function(err, connection) {
+    if(err) return console.log(err);
+
+    connection.write(Buffer.from('Q', 'utf-8'), (err) => {
+      if(err) console.log(err);
+    });
+  
+    connection.on('data', (buffer) => {
+      risposta = buffer.toString();
+      connection.close();
+      res.status(200).json({
+        message: 'Here\'s the response!',
+        response: risposta
+      });
+    });
+  });
+}
