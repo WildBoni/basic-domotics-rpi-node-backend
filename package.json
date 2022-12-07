@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/WildBoni/basic-domotics-rpi-node-backend#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "node-bluetooth": "^1.2.6"
   }
 }
